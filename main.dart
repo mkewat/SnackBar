@@ -32,16 +32,17 @@ class DemoState extends State<Demo> {
           return Center(
             child: RaisedButton(
               color: Colors.blue,
-              child: Text(
-                'SNACKBAR',
-                style: TextStyle(color: Colors.white),
-              ),
               onPressed: () {
                 Scaffold.of(context).showSnackBar(SnackBar(
                   content: Text('Hello!'),
                   backgroundColor: Colors.blue,
+                  duration: (Duration(seconds: 2)),
                 ));
               },
+              child: Text(
+                'SNACKBAR',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           );
         },
